@@ -25,7 +25,7 @@ class DecryptActivity : Activity() {
             val data = ByteArray(file.length().toInt())
             mbb[data]
             //Pass in the IV related to encryption and decryption
-            val decryptor = PlayerDecryptor(this@DecryptActivity, "Decrypt IV")
+            val decryptor = PlayerDecryptor(this@DecryptActivity, "IV")
             //Pass in the encrypted data and get the decrypted data
             val decryptedResult = decryptor.process(ByteBuffer.wrap(data))
             val decryptedData = decryptedResult.data
